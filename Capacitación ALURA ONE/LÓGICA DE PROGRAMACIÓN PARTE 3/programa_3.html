@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <canvas width="600" height="400">
 </canvas>
 <script>
@@ -41,4 +42,49 @@
     pantalla.onauxclick = dibujarCirculo1;
 
 </script>
+=======
+<canvas width="600" height="400">
+</canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+    function mostrarAlerta(evento) {
+        
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        console.log(evento);
+        alert(x + "," + y);
+    } 
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*Math.PI);
+        pincel.fill();
+        console.log(x + "," + y);
+    }
+
+    function dibujarCirculo1(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        pincel.fillStyle = "red";
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*Math.PI);
+        pincel.fill();
+        console.log(x + "," + y);
+    }
+    
+    pantalla.onclick = dibujarCirculo;
+    pantalla.onauxclick = dibujarCirculo1;
+
+</script>
+>>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
     

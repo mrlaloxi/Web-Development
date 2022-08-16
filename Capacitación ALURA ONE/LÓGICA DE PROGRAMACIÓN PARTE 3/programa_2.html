@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <canvas width="600" height="400">
 </canvas>
 <script>
@@ -20,4 +21,28 @@
 
     
 </script>
+=======
+<canvas width="600" height="400">
+</canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+    function mostrarAlerta() {
+        alert("usted hizo un clic");
+    } 
+    
+    pantalla.onclick = mostrarAlerta;
+
+
+    
+
+    
+
+    
+</script>
+>>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
     

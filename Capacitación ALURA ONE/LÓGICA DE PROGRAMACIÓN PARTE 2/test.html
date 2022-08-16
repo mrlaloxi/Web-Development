@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <meta charset="UTF-8">
 
 <h1>Recetas de Armando</h1>
@@ -28,4 +29,36 @@
 
     console.log(ingredientes);
 
+=======
+<meta charset="UTF-8">
+
+<h1>Recetas de Armando</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        var repetido = false;
+        for (let i = 0; i < ingredientes.length; i++) {
+            
+            if(ingrediente == ingredientes[i]){
+                repetido = true;
+            }
+        }
+            
+            if(repetido == false){
+                ingredientes.push(ingrediente);
+                contador++;
+            }
+            
+        
+    }
+
+    console.log(ingredientes);
+
+>>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
 </script>

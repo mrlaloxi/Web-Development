@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <h1>PROGRAMA - JUEGO DE ADIVINACIÓN</h1>
 <script>
@@ -30,4 +31,38 @@
         imprimir("Se agotaron los intentos, el número pensado fue: "+ numeroPensado)
     }
 
+=======
+<meta charset="UTF-8">
+<h1>PROGRAMA - JUEGO DE ADIVINACIÓN</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(texto){
+        document.write(texto);
+        saltarLinea();
+    }
+    var cont = 1;
+    var numIntentos = 3;
+    var numeroPensado = Math.round(Math.random()*10);
+    while (cont <= numIntentos) {
+        
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"));
+
+        if (numeroPensado == numeroLanzado) {
+        alert("Usted acertó");
+        imprimir("Felicidades, acertaste, el número pensado fue: "+numeroPensado);
+        break;
+        } else {
+        alert("Usted erró")
+        }
+        cont++;
+    }
+
+    if (cont == numIntentos+1) {
+        imprimir("Se agotaron los intentos, el número pensado fue: "+ numeroPensado)
+    }
+
+>>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
 </script>

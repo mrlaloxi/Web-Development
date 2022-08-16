@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <h1>Ejercicio</h1>
 <script>
@@ -32,4 +33,40 @@
     if (imcCalculado >= 30) {
         imprimir("IMC considerado como obesidad")
     }
+=======
+<meta charset="UTF-8">
+<h1>Ejercicio</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(texto){
+        document.write(texto);
+        saltarLinea();
+    }
+    function calcularImc(peso,altura){
+        imc = peso / (altura*altura);
+        return imc;
+    }
+
+    nombre = prompt("Indique su nombre");
+    peso = prompt(nombre + ", indique su peso");
+    altura = prompt(nombre + " indique su altura")
+    imcCalculado = calcularImc(peso, altura);
+    imprimir(nombre + ", su imc es: " + imcCalculado);
+
+    if (imcCalculado < 18.5) {
+        imprimir("IMC abajo de lo recomendado")
+    }
+    if (imcCalculado >= 18.5 && imcCalculado <25) {
+        imprimir("IMC está dentro del intervalo normal")
+    }
+    if (imcCalculado >= 25 && imcCalculado < 30) {
+        imprimir("IMC considerado como sobrepeso")
+    }
+    if (imcCalculado >= 30) {
+        imprimir("IMC considerado como obesidad")
+    }
+>>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
 </script>
