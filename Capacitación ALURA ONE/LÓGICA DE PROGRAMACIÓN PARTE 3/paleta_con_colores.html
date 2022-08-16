@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <canvas width="600" height="400"></canvas>
 
 <script>
@@ -70,77 +70,5 @@
     pantalla.onmouseup = deshabilitarDibujar;
     // cuando hace click cambia el color
     pantalla.onclick = cambiarColor;
-=======
-<canvas width="600" height="400"></canvas>
 
-<script>
-    var pantalla = document.querySelector('canvas');
-    var pincel = pantalla.getContext('2d');
-
-    var colorPincel = "blue";
-    pincel.fillStyle = 'grey';
-    pincel.fillRect(0, 0, 600, 400);
-
-    var puedoDibujar = false;
-    //funcion para crearcuadrado
-    function creaCuadrado(x,y,colorCuadrado) {
-        pincel.fillStyle = colorCuadrado;
-        pincel.fillRect(x, y, 50, 50);
-    }
-    //Creando paleta
-    creaCuadrado(0,0,"red");
-    creaCuadrado(50,0,"green");
-    creaCuadrado(100,0,"blue");
-
-    //funcion para cambiar color
-
-    function cambiarColor(evento){
-        var x = evento.pageX - pantalla.offsetLeft;
-        var y = evento.pageY - pantalla.offsetTop;
-        //si hace clic en rojo cambia a rojo
-        if((x > 0 && x < 50) && (y > 0 && y < 50)){
-            colorPincel = "red";
-        //si hace clic en el área verde cambia a verde
-        }else if((x > 50 && x < 100) && (y > 0 && y < 50)){
-            colorPincel = "green";
-        //si hace clic en el área azul cambia a azul
-        }else if((x > 100 && x < 150) && (y > 0 && y < 50)){
-            colorPincel = "blue";
-        }
-    }
-    function dibujarCirculo(evento) {
-        var x = evento.pageX - pantalla.offsetLeft;
-        var y = evento.pageY - pantalla.offsetTop;
-        //restrinjo para que solo pinte fuera del área de paletas
-        if ((x > 150 && x < 600) || (y > 50 && y < 400)) {
-            if(puedoDibujar) {
-            console.log(x + "," + y);
-            pincel.fillStyle = colorPincel;
-            pincel.beginPath();
-            pincel.arc(x, y, 3, 0, 2 * 3.14);
-            pincel.fill();
-        }
-        }
-
-    }
-    
-
-    pantalla.onmousemove = dibujarCirculo;
-
-    function habilitarDibujar() {
-
-        puedoDibujar = true;
-    }
-
-    function deshabilitarDibujar() {
-
-        puedoDibujar = false;
-    }
-
-    pantalla.onmousedown = habilitarDibujar;
-
-    pantalla.onmouseup = deshabilitarDibujar;
-    // cuando hace click cambia el color
-    pantalla.onclick = cambiarColor;
->>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
 </script>

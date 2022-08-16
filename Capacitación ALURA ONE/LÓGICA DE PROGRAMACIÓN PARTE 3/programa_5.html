@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <canvas width="600" height="400"> </canvas>
 
 <script>
@@ -64,71 +64,5 @@
         // setInterval(actualizarPantalla,5);
 
 
-=======
-<canvas width="600" height="400"> </canvas>
 
-<script>
-    var pantalla = document.querySelector("canvas");
-    var pincel = pantalla.getContext("2d");
-    pincel.fillStyle = "lightgrey";
-    pincel.fillRect(0,0,600,400);
-
-    var xAleatorio;
-    var yAleatorio;
-    function disenarCircunferencia(x,y,radio,color){
-        pincel.fillStyle = color;
-        pincel.beginPath();
-        pincel.arc(x,y,radio,0,2*Math.PI);
-        pincel.fill();
-    }
-
-    function limpiarPantalla(){
-        pincel.clearRect(0,0,600,400);
-    }
-
-
-    function actualizarPantalla() {
-        limpiarPantalla();
-        xAleatorio = sortearPosicion(600);
-        yAleatorio = sortearPosicion(400);
-        disenarObjetivo(xAleatorio, yAleatorio);
-    }
-
-    var radio = 10;
-    function disenarObjetivo(x,y){
-        disenarCircunferencia(x, y, radio + 20, "red" );
-        disenarCircunferencia(x, y, radio + 10, "white" );
-        disenarCircunferencia(x, y, radio, "red" );
-
-    }
-    function sortearPosicion(maximo) {
-        return Math.floor(Math.random()*maximo);
-
-    }
-
-    /* xAleatorio = sortearPosicion(600);
-    yAleatorio = sortearPosicion(400);;
-
-    disenarObjetivo(xAleatorio, yAleatorio); */
-
-    setInterval(actualizarPantalla,1000);
-
-    function disparar(evento){
-        var x = evento.pageX - pantalla.offsetLeft;
-        var y = evento.pageY - pantalla.offsetTop;
-
-        var theta = Math.PI*0.5;
-
-        if((x < xAleatorio + radio)&&
-            (x > xAleatorio - radio)&&
-            (y < yAleatorio + radio)&&
-            (y > yAleatorio - radio)){
-            alert("Tiro certero");
-        }
-    }
-    pantalla.onclick = disparar;
-        // setInterval(actualizarPantalla,5);
-
-
->>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
 </script>

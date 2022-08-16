@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <canvas width="600" height="400"> </canvas>
 
 <script>
@@ -56,63 +56,5 @@
         // setInterval(actualizarPantalla,5);
         
 
-=======
-<canvas width="600" height="400"> </canvas>
 
-<script>
-    var pantalla = document.querySelector("canvas");
-    var pincel = pantalla.getContext("2d");    
-    pincel.fillStyle = "lightgrey";
-    pincel.fillRect(0,0,600,400); 
-    
-
-    function disenarCircunferencia(x,y,radio){
-        pincel.fillStyle = "blue";
-        pincel.beginPath();
-        pincel.arc(x,y,radio,0,2*Math.PI);
-        pincel.fill();
-    }
-
-    function limpiarPantalla(){
-        pincel.clearRect(0,0,600,400);
-    }
-
-    var x = 0;
-    var y = 600;
-    function actualizarPantalla() {
-            if (x<600) {
-                limpiarPantalla();
-                disenarCircunferencia(x,20,10);
-                x++;
-                if(x == 600){
-                    y = 600;
-                }
-            }else{
-                if(y>0){
-                    limpiarPantalla();
-                    disenarCircunferencia(y,20,10);
-                    y--;
-                    if(y == 0){
-                    x = 0;
-                }
-                }
-            }
-            
-               
-    }
-    var y = 600
-    function actualizarPantalla1() {
-            limpiarPantalla();
-            disenarCircunferencia(y,20,10);
-            y--;   
-    }
-
-    
-            setInterval(actualizarPantalla,5);
-       
-        
-        // setInterval(actualizarPantalla,5);
-        
-
->>>>>>> ee2a113ed8540977727ef727b24c22cfb231aff0
 </script> 
